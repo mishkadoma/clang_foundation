@@ -17,6 +17,10 @@ int main(void)
             case 1:
                 printf("Your number is %i\n", n);
                 break;
+            
+            default: 
+                printf("Enter 0 or 1, PLEASE! Not '%i'\n", n);
+                break;
         }
     }
     while (true);
