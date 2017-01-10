@@ -3,7 +3,7 @@
 #include <cs50.h>
 #include <ctype.h>
 #include <string.h>
-//to viginere
+//to vigenere
 
 void to_cipher(string plaintext, int key);
 string alphabet(void);
