@@ -29,20 +29,21 @@ void to_cipher(string plaintext, string key)
 {
     string alphabet1 = alphabet();
     int j = 0;
-    int key_index = j%strlen(key);
+    int key_index;
     for (int i=0, n=strlen(plaintext); i<n; i++)
     {
         if (isalpha(plaintext[i]))
         {
-            j++;
+            key_index = j%strlen(key);
             if (isupper(plaintext[i]))
             {
-                printf("%c", toupper(alphabet1[(plaintext[i]-'A'+key[key_index])%26]));
+                printf("%c", toupper(alphabet1[(plaintext[i]-'A'-'A'+toupper(key[key_index]))%26]));
             }
             else
             {
-                printf("%c", alphabet1[(plaintext[i]-'a'+key[key_index])%26]);
+                printf("%c", alphabet1[(plaintext[i]-'a'-'a'+tolower(key[key_index]))%26]);
             }
+            j++;
         }
         else
         {
