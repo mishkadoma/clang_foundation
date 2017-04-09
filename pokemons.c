@@ -15,7 +15,7 @@ int main()
     pokemons[i] = GetString();
   }
 
-  printf("%s, i choose you!\n", pokemons[rand()%POKEMONS_QNT]);
+  printf("%s, i choose you!\n", pokemons[rand()]);
 
   return 0;
 }
