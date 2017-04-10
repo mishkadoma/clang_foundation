@@ -28,5 +28,5 @@ float the_mean(int *x)
         result += x[n];
     }
     
-    return ((float) result/N);
+    return ((float) result / N);
 }
