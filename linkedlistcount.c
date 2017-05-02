@@ -19,7 +19,15 @@ node* head = NULL;
 
 int length(void)
 {
-
+  node *new = head;
+   int counter = 1;
+   while (new->next != NULL)
+   {
+       counter++;
+       head = new->next;
+       new = head;
+   }
+   return counter;
 }
 
 int main(int argc, char* argv[])
